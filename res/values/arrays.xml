@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="companies_array">
+        <item>Apple</item>
+        <item>Google</item>
+        <item>Collegewires</item>
+    </string-array>
+    
+    <string-array name="desc">
+        <item>Apple is an awesome company. It was founded by Steve Jobs, and his friend Steve Wozniak. Steve Jobs, one of the great visionaries. But I don\'t like Apple Products. :P</item>
+        <item>Google is awesome too. The best thing I love about Google is Android. Android is damn sexy!</item>
+        <item>An unfinished project started by Hrishikesh, turns into a blog which covers Android tutorials. And now it builds Android apps now. The latest app is Sleep Optimal.</item>
+    </string-array>
+    
+</resources>
