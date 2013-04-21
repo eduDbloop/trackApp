@@ -1,6 +1,7 @@
 package com.example.trackapp;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.TextureView;
@@ -20,7 +21,7 @@ public class DetailsFragment extends SherlockFragment {
      */
     public static DetailsFragment newInstance(int index) {
         DetailsFragment f = new DetailsFragment();
- 
+        //Log.d("Prueba", "APARECI");
         // Supply index input as an argument.
         Bundle args = new Bundle();
         args.putInt("index", index);

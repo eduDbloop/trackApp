@@ -83,7 +83,7 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		Toast.makeText(mContext, "You've deselected a tab", Toast.LENGTH_SHORT).show();
+		Toast.makeText(mContext, getClass().getName(), Toast.LENGTH_SHORT).show();
 	}
 
 	@Override

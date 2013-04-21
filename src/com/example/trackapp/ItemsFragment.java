@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,6 @@ public class ItemsFragment extends SherlockListFragment {
 	boolean isDualPane;
 	int mCurCheckPosition = 0;
 
-	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
@@ -38,6 +38,8 @@ public class ItemsFragment extends SherlockListFragment {
 		// Check to see if we have a frame in which to embed the details
 		// fragment directly in the containing UI
 		View detailsFrame = getActivity().findViewById(R.id.details);
+		if(detailsFrame != null)
+	        Log.d("Prueba", "APARECI");
 		isDualPane = detailsFrame != null && detailsFrame.getVisibility() == View.VISIBLE;
 		
 		if(savedInstanceState != null) {
@@ -47,8 +49,8 @@ public class ItemsFragment extends SherlockListFragment {
 		
 		if(isDualPane) {
 			// In dual-pane mode, the list view highlights the selected item.
+	        Log.d("Prueba", "Dual Panel");
 			getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-			
 			showDetails(mCurCheckPosition);
 		}
 	}
@@ -73,6 +75,7 @@ public class ItemsFragment extends SherlockListFragment {
         mCurCheckPosition = index;
  
         if (isDualPane) {
+            Log.d("Prueba", "DUALPANEL");
             // We can display everything in-place with fragments, so update
             // the list to highlight the selected item and show the data.
             getListView().setItemChecked(index, true);
@@ -101,5 +104,4 @@ public class ItemsFragment extends SherlockListFragment {
             startActivity(intent);
         }
     }
-    
 }
