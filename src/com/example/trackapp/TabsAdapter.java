@@ -71,7 +71,7 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		mViewPager.setCurrentItem(tab.getPosition());
-		Log.v(TAG, "clicked");
+		//Log.v(TAG, "clicked");
 		Object tag = tab.getTag();
 		for (int i = 0; i<mTabs.size(); i++){
 			if (mTabs.get(i) == tag){
@@ -83,7 +83,7 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		Toast.makeText(mContext, getClass().getName(), Toast.LENGTH_SHORT).show();
+		//Toast.makeText(mContext, getClass().getName(), Toast.LENGTH_SHORT).show();
 	}
 
 	@Override

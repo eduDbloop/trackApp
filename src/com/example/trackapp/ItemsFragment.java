@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockListFragment;
@@ -19,6 +20,7 @@ public class ItemsFragment extends SherlockListFragment {
 	
 	boolean isDualPane;
 	int mCurCheckPosition = 0;
+	private final String TAG = "trackApp:";
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -34,12 +36,14 @@ public class ItemsFragment extends SherlockListFragment {
 			setListAdapter(new ArrayAdapter<String>(getActivity(), 
 					android.R.layout.simple_list_item_activated_1, getResources().getStringArray(R.array.companies_array)));
 		}
+		
 			
 		// Check to see if we have a frame in which to embed the details
 		// fragment directly in the containing UI
 		View detailsFrame = getActivity().findViewById(R.id.details);
+		Toast.makeText(getActivity(), getActivity().toString(), Toast.LENGTH_SHORT).show();
 		if(detailsFrame != null)
-	        Log.d("Prueba", "APARECI");
+	        Log.v(TAG, "APARECI");
 		isDualPane = detailsFrame != null && detailsFrame.getVisibility() == View.VISIBLE;
 		
 		if(savedInstanceState != null) {
@@ -49,7 +53,7 @@ public class ItemsFragment extends SherlockListFragment {
 		
 		if(isDualPane) {
 			// In dual-pane mode, the list view highlights the selected item.
-	        Log.d("Prueba", "Dual Panel");
+	        Log.v(TAG, "Dual Panel");
 			getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 			showDetails(mCurCheckPosition);
 		}
