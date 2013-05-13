@@ -1,6 +1,8 @@
 package com.example.trackapp;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.drawable.GradientDrawable.Orientation;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -37,14 +39,23 @@ public class ItemsFragment extends SherlockListFragment {
 					android.R.layout.simple_list_item_activated_1, getResources().getStringArray(R.array.companies_array)));
 		}
 		
-			
+		
 		// Check to see if we have a frame in which to embed the details
 		// fragment directly in the containing UI
-		View detailsFrame = getActivity().findViewById(R.id.details);
-		Toast.makeText(getActivity(), getActivity().toString(), Toast.LENGTH_SHORT).show();
-		if(detailsFrame != null)
-	        Log.v(TAG, "APARECI");
-		isDualPane = detailsFrame != null && detailsFrame.getVisibility() == View.VISIBLE;
+		
+		
+		//View detailsFrame = getActivity().findViewById(R.id.details);
+		//Toast.makeText(getActivity(), detailsFrame.toString(), Toast.LENGTH_SHORT).show();
+		if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+			//Log.v(TAG, "NO SOY NULL");
+			isDualPane = true;
+		} else {
+			//Log.v(TAG, "SOY NULL");
+			isDualPane = false;
+		}
+		//isDualPane = detailsFrame != null && detailsFrame.getVisibility() == View.VISIBLE;
+		
+		//isDualPane = detailsFrame != null && detailsFrame.isVisible();
 		
 		if(savedInstanceState != null) {
 			// Restore last state for checked position.
@@ -53,7 +64,7 @@ public class ItemsFragment extends SherlockListFragment {
 		
 		if(isDualPane) {
 			// In dual-pane mode, the list view highlights the selected item.
-	        Log.v(TAG, "Dual Panel");
+	        //Log.v(TAG, "Dual Panel");
 			getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 			showDetails(mCurCheckPosition);
 		}
@@ -79,7 +90,7 @@ public class ItemsFragment extends SherlockListFragment {
         mCurCheckPosition = index;
  
         if (isDualPane) {
-            Log.d("Prueba", "DUALPANEL");
+            
             // We can display everything in-place with fragments, so update
             // the list to highlight the selected item and show the data.
             getListView().setItemChecked(index, true);

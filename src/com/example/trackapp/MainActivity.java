@@ -28,6 +28,6 @@ public class MainActivity extends SherlockFragmentActivity {
 		mTabsAdapter = new TabsAdapter(this, mViewPager);
 		mTabsAdapter.addTab(bar.newTab().setText("Manual"), Fragment1.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText("Alerta"), Fragment2.class, null);
-		mTabsAdapter.addTab(bar.newTab().setText("Datos"), ItemsFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab().setText("Datos"), FragmentLayout.class, null);
 	}
 }
