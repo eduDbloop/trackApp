@@ -6,7 +6,12 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
 
 public class MainActivity extends SherlockFragmentActivity {
@@ -17,7 +22,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+				
 		mViewPager = new ViewPager(this);
 		mViewPager.setId(R.id.pager);
 		setContentView(mViewPager);
@@ -29,5 +34,6 @@ public class MainActivity extends SherlockFragmentActivity {
 		mTabsAdapter.addTab(bar.newTab().setText("Manual"), Fragment1.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText("Alerta"), Fragment2.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText("Datos"), FragmentLayout.class, null);
+	    
 	}
 }

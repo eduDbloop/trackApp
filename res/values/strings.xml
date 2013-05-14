@@ -4,5 +4,29 @@
     <string name="app_name">trackApp</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="first_name">Nombre(s)s</string>
+    <string name="last_name">Apellido(s)</string>
+    <string name="cel">Celular</string>
+    <string name="mail">E-Mail</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="whatsNewText">Esta idea viene por 
+        una experiencia de robo a mano armada de mi vehículo, 
+        bien dicen por ahí, nadie está preparado para un accidente 
+        o percance y precisamente esta aplicación está diseñada 
+        para ayudar a todas las personas que sean víctimas de la 
+        delincuencia, en este caso en particular del robo del vehículo. 
+        Todos los que hemos sido victimas, sabemos que uno de los 
+        principales problemas a la hora del percance es ¿y ahora qué 
+        hago? No sabemos a quién llamar, no tenemos los datos del 
+        vehículo ya que la tarjeta de circulación se fue en él, no 
+        tenemos nuestra póliza de seguros a la mano, si es que está 
+        asegurado, nunca nadie nos mostro el procedimiento para evitar 
+        el calvario de trámites que se deben realizar para reportar el 
+        vehículo como robado. Con esta aplicación intentaré ayudar a 
+        solucionar ese problema que sufren cientos de personas 
+        diariamente.</string>
+    <string name="whatsNewTitle">Bienvenido!</string>
+    <string name="ok">OK</string>
 
 </resources>
