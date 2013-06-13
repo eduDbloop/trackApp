@@ -2,15 +2,15 @@
 <resources>
     
     <string-array name="companies_array">
-        <item>Apple</item>
-        <item>Google</item>
-        <item>Collegewires</item>
+        <item>Datos Personales</item>
+        <item>Datos de Aseguradora</item>
+        <item>Datos del Vehiculo</item>
     </string-array>
     
     <string-array name="desc">
-        <item>Apple is an awesome company. It was founded by Steve Jobs, and his friend Steve Wozniak. Steve Jobs, one of the great visionaries. But I don\'t like Apple Products. :P</item>
-        <item>Google is awesome too. The best thing I love about Google is Android. Android is damn sexy!</item>
-        <item>An unfinished project started by Hrishikesh, turns into a blog which covers Android tutorials. And now it builds Android apps now. The latest app is Sleep Optimal.</item>
+        <item>Prueba Datos Personales</item>
+        <item>Prueba Datos Aseguradora</item>
+        <item>Prueba Datos del Vehiculo</item>
     </string-array>
     
 </resources>

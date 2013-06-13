@@ -28,5 +28,7 @@
         diariamente.</string>
     <string name="whatsNewTitle">Bienvenido!</string>
     <string name="ok">OK</string>
+    <string name="next">Siguiente</string>
+    <string name="desc">SOS Call</string>
 
 </resources>

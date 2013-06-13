@@ -2,11 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Fragment 2"/>
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/abs__background_holo_dark">
+
+    <Button
+            android:id="@+id/sos_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_button"
+            android:contentDescription="@string/desc"/>
 
 </LinearLayout>
